@@ -27,5 +27,9 @@ func main() {
 	r.GET("/posts", controllers.PostsIndex)
 	r.GET("/posts/:id", controllers.PostShow)
 	r.DELETE("/posts/:id", controllers.PostDelete)
+
+	// test russ
+
+	r.POST("/twonums", controllers.PostsNums)
 	r.Run() // listen and serve on 0.0.0.0:8080
 }

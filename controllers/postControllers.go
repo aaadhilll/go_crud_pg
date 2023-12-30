@@ -8,6 +8,42 @@ import (
 	"github.com/robbyklein/go-crud/models"
 )
 
+
+
+func PostsNums(c *gin.Context) {
+	// data of body
+
+	var body struct {
+		NumOne  int
+		NumTwo 	int
+	}
+
+	c.Bind(&body)
+
+	sum := body.NumOne + body.NumTwo
+
+	// Create a post
+	// post := models.Post{Title: body.Title, Body: body.Body}
+
+	// result := initializers.DB.Create(&post)
+
+	// if result.Error != nil {
+	// 	fmt.Println(result.Error)
+	// 	c.Status(400)
+	// 	return
+	// }
+
+	// // Return it
+
+	c.JSON(200, gin.H{
+		"sum iss": sum,
+	})
+
+	// c.JSON(200, gin.H{
+	// 	"post" : "helos",
+	// })
+}
+
 func PostsCreate(c *gin.Context) {
 	// data of body
 
