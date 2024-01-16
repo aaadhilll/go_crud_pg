@@ -1,0 +1,15 @@
+host: localhost:3000
+info:
+  contact: {}
+  description: A Tag service API in Go using Gin framework
+  title: Tag Service API
+  version: "1.0"
+paths:
+  /posts:
+    post:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+swagger: "2.0"

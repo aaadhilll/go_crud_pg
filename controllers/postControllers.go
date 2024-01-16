@@ -44,6 +44,19 @@ func PostsNums(c *gin.Context) {
 	// })
 }
 
+type CreateTagsRequest struct {
+	Name string `validate:"required,min=1,max=200" json:"name"`
+	
+}
+
+// CreateTags		godoc
+// @Summary			Create posts
+// @Description		Save tags data in Db.
+// @Param			posts CreateTagsRequest  "Create new tag"
+// @Produce			application/json
+// @Posts			posts
+// @Success			200 
+// @Router			/posts [post]
 func PostsCreate(c *gin.Context) {
 	// data of body
 
