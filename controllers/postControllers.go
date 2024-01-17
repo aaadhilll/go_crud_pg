@@ -140,7 +140,7 @@ func PostDelete(c *gin.Context){
 	// delete post
 	initializers.DB.Delete(&models.Post{}, id)
 
-	// respond
+	// resp
 
 	c.Status(200)
 }
