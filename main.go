@@ -47,7 +47,7 @@ func main() {
 	// api calling and insert to table
 	r.GET("/country/city", controllers.GetAllCity)
 
-	// test russ
+	// test 
 
 	r.POST("/twonums", controllers.PostsNums)
 	r.Run() // listen and serve on 0.0.0.0:8080
